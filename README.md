@@ -35,11 +35,18 @@ pustaka-senja/
 ## 🧪 Urutan Ngetes
 `Login -> Dashboard -> Katalog -> Keranjang -> Checkout -> Tracking -> Laporan`
 1. **Login:** Coba login salah -> muncul alert. Login benar -> pindah dashboard.
+![Gambar 1](ss/ss1.png)
 2. **Dashboard:** Lihat greeting by jam, Hero Promo, Best Seller, Testimoni. Klik 🌙 untuk Dark Mode.
+![Gambar 2](ss/ss2.png)
 3. **Katalog:** Ketik `Laut` di search, klik filter Novel/Self-Development/Sejarah, klik buku -> Modal Detail.
+![Gambar 3](ss/ss3.png)
 4. **Keranjang:** Klik `+ Keranjang` -> Toast muncul + badge nambah.
+![Gambar 4](ss/ss4.png)
 5. **Checkout:** Total otomatis kehitung, bisa hapus item, klik Bayar -> dapat `DO001`.
+![Gambar 5](ss/ss5.png)
 6. **Tracking:** Ketik `DO001` / `DO002` -> Progress Bar jalan. Ketik `DO999` -> tidak ditemukan.
+![Gambar 6](ss/ss6.png)
 7. **Laporan:** Lihat tabel history + total pendapatan.
+![Gambar 7](ss/ss7.png)
 
 
