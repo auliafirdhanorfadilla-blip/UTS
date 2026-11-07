@@ -50,3 +50,10 @@ pustaka-senja/
 ![Gambar 7](ss/ss7.png)
 
 
+👨‍💻 Dibuat Oleh
+Nama: [Aulia Firdha Norfadilla]
+NIM: [312510186]
+Kelas: [I253A]
+Mata Kuliah: Pemrograman Web - UTS
+
+
