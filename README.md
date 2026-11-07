@@ -50,10 +50,22 @@ pustaka-senja/
 ![Gambar 7](ss/ss7.png)
 
 
-👨‍💻 Dibuat Oleh
-Nama: [Aulia Firdha Norfadilla]
-NIM: [312510186]
-Kelas: [I253A]
-Mata Kuliah: Pemrograman Web - UTS
+---
+
+<div align="center">
+
+# ✨ Dibuat Oleh ✨
+| | |
+| :---: | :---: |
+| 📚 **Nama** | `Aulia Firdha Norfadilla` |
+| 🎓 **NIM** | `312510186` |
+| 🏫 **Kelas** | `I253A • Pemrograman Web` |
+| 📖 **Project** | **Pustaka Senja — Toko Buku Online** |
+> *"Kalau kamu suka buku, kamu akan suka senja."*
+> *— Pustaka Senja*
+
+</div>
+
+---
 
 
