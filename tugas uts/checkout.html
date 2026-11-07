@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Pustaka Senja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <strong>📚 Pustaka Senja</strong>
+    <nav><a href="dashboard.html">Dashboard</a></nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>🛒 Keranjang Kamu</h2>
+      <div id="listKeranjang"></div>
+      <h3 id="totalHarga">Total: Rp 0</h3>
+
+      <label>Nama Pemesan</label>
+      <input id="namaPemesan" placeholder="Nama lengkap">
+
+      <label>Alamat Pengiriman</label>
+      <textarea rows="2" placeholder="Alamat lengkap"></textarea>
+
+      <label>Metode Pembayaran</label>
+      <select>
+        <option>Transfer Bank</option>
+        <option>COD</option>
+        <option>E-Wallet</option>
+      </select>
+
+      <button class="btn" style="width:100%" onclick="checkout()">Bayar Sekarang</button>
+    </section>
+  </main>
+
+  <script>
+    const keranjang = JSON.parse(localStorage.getItem("keranjang") || "[]");
+    const list = document.getElementById("listKeranjang");
+
+    if (keranjang.length === 0) {
+      list.innerHTML = "<p>Keranjang masih kosong. Pilih buku dulu di katalog.</p>";
+    } else {
+      list.innerHTML = keranjang.map((buku, i) => `
+        <p>${i + 1}. ${buku.judul} - Rp ${buku.harga.toLocaleString("id-ID")}
+        <button onclick="hapusItem(${i})" style="color:red; border:none; background:none; cursor:pointer;">✕ Hapus</button></p>
+      `).join("");
+    }
+
+    const total = keranjang.reduce((sum, buku) => sum + buku.harga, 0);
+    document.getElementById("totalHarga").textContent = "Total: Rp " + total.toLocaleString("id-ID");
+
+    function hapusItem(index) {
+      keranjang.splice(index, 1);
+      localStorage.setItem("keranjang", JSON.stringify(keranjang));
+      location.reload();
+    }
+
+    function checkout() {
+      if (keranjang.length === 0) return alert("Keranjang kosong!");
+      alert("Pesanan berhasil! Nomor DO kamu: DO001");
+      localStorage.removeItem("keranjang");
+      window.location.href = "tracking.html";
+    }
+  </script>
+</body>
+</html>

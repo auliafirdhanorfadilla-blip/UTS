@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog - Pustaka Senja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <strong>📚 Pustaka Senja</strong>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="checkout.html">Keranjang <span class="cart-badge" id="cartCount">0</span></a>
+      <button class="btn" onclick="toggleDark()" style="padding:6px 12px; margin-left:10px;">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" style="padding:18px 20px;">
+      <div>
+        <span class="promo-badge">GRATIS ONGKIR • MIN. Rp 50.000</span>
+        <h2 style="margin:0;">Cari Buku Favoritmu 📚</h2>
+        <p style="margin:6px 0 0;">Diskon 30% semua buku minggu ini!</p>
+      </div>
+      <div class="hero-img" style="font-size:50px;">🔍</div>
+    </section>
+
+    <input id="searchBuku" placeholder="🔍 Cari judul / penulis... contoh: Laut" oninput="renderKatalog()">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="setFilter('Semua', this)">Semua</button>
+      <button class="filter-btn" onclick="setFilter('Novel', this)">Novel</button>
+      <button class="filter-btn" onclick="setFilter('Self-Development', this)">Self-Development</button>
+      <button class="filter-btn" onclick="setFilter('Sejarah', this)">Sejarah</button>
+    </div>
+
+    <button class="btn" onclick="tambahBuku()">+ Tambah Buku Baru</button>
+    <br><br>
+
+    <div class="grid" id="katalog"></div>
+  </main>
+
+  <!-- Modal Detail Buku -->
+  <div class="modal" id="modalDetail">
+    <div class="modal-content" style="text-align:center;">
+      <h3 id="detailJudul">Judul Buku</h3>
+      <div id="detailIsi"></div>
+      <button class="btn" id="btnDetailPesan">+ Masuk Keranjang</button>
+      <button class="btn-outline" onclick="closeModal('modalDetail')">Tutup</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

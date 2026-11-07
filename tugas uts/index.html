@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Pustaka Senja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container" style="max-width:420px; margin-top:60px;">
+    <section class="card" style="text-align:center;">
+      <h1>📚 Pustaka Senja</h1>
+      <p>Tempat buku menemukan rumahnya.</p>
+
+      <form onsubmit="login(event)" style="text-align:left;">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="admin@buku.id" required>
+        <label>Password</label>
+        <input id="password" type="password" placeholder="12345" required>
+        <button class="btn" style="width:100%;">Login</button>
+      </form>
+
+      <p style="margin-top:14px;">
+        <a href="#" onclick="openModal('modalLupa')">Lupa Password?</a> |
+        <a href="#" onclick="openModal('modalDaftar')">Daftar</a>
+      </p>
+      <small>Demo: admin@buku.id / 12345</small>
+    </section>
+  </main>
+
+  <!-- Modal Lupa Password -->
+  <div class="modal" id="modalLupa">
+    <div class="modal-content">
+      <h3>Lupa Password</h3>
+      <input type="email" placeholder="Masukkan email kamu">
+      <button class="btn" onclick="closeModal('modalLupa'); alert('Link reset dikirim ke email!')">Kirim</button>
+      <button class="btn-outline" onclick="closeModal('modalLupa')">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Modal Daftar -->
+  <div class="modal" id="modalDaftar">
+    <div class="modal-content">
+      <h3>Daftar Akun Baru</h3>
+      <input placeholder="Nama Lengkap">
+      <input placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button class="btn" onclick="closeModal('modalDaftar'); alert('Akun berhasil dibuat! Silakan login.')">Daftar</button>
+      <button class="btn-outline" onclick="closeModal('modalDaftar')">Batal</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

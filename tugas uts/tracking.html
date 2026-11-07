@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking - Pustaka Senja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <strong>📚 Pustaka Senja</strong>
+    <nav><a href="dashboard.html">Dashboard</a></nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Lacak Pengiriman</h2>
+      <p>Coba ketik: <strong>DO001</strong> atau <strong>DO002</strong></p>
+      <input id="noDO" placeholder="Masukkan Nomor Delivery Order">
+      <button class="btn" onclick="cariResi()">Cari</button>
+      <div id="hasilTracking" style="margin-top:16px;"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
